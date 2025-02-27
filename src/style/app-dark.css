@@ -1,0 +1,85 @@
+:root {
+}
+
+
+
+/*  App Profile*/
+
+.App {
+    background-color: #303030;
+}
+
+.App-Content {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-Content-construction {
+    background-color: #282c34;
+    background-image: linear-gradient(90deg, transparent 50%, #fbff00 50%); /* Comment: Creates a linear gradient for the stripes pattern */
+    background-size: 60px 600px; /* Comment: Sets the size of each stripe */
+    background-repeat: repeat;
+    transform: scale(2) rotate(30deg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+
+  /* Header Profiles */
+
+.header-icon {
+    display:inline;
+    float:left;
+    padding:15px;
+    margin:-10px;
+    margin-left:15px;
+    margin-right:15px;
+    border-radius: 10%;
+    list-style-type: none;
+}
+
+.header-navbar {
+    background-color: #403f44;
+    display:grid;
+    grid-row:1;
+    grid-auto-flow: column;
+    gap:10px;
+    padding:0;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin:0;
+    width: 100%;
+}
+
+.header-button {
+    display:inline;
+    float:right;
+    user-select: none;
+    color:#f3faff;
+    padding:10px;
+    transition: background-color 0.25s, color 0.25s;
+    margin-left:15px;
+    margin-right:15px;
+    border-radius: 10%;
+}
+
+.header-button-selected {
+    background-color: #56565e;
+}
+
+.header-button:hover {
+    transition: background-color 0.25s, color 0.25s;
+    
+    background-color: #56565e;
+}
