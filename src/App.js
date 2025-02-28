@@ -9,7 +9,7 @@ import Footer from './components/nav/footer';
 
 function App() {
   var path = window.location.pathname;
-  var constructionmode = true
+  var constructionmode = false;
 
   function generateHeader() {
     if (path == "/about/") return Header(0);
