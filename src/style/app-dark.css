@@ -20,12 +20,24 @@
     color: white;
   }
 
+@keyframes constructionbg {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 120px;
+    }
+}
+
   .App-Content-construction {
     background-color: #282c34;
-    background-image: linear-gradient(90deg, transparent 50%, #fbff00 50%); /* Comment: Creates a linear gradient for the stripes pattern */
-    background-size: 60px 600px; /* Comment: Sets the size of each stripe */
-    background-repeat: repeat;
-    transform: scale(2) rotate(30deg);
+    background-attachment:fixed;
+    background-image: repeating-linear-gradient(30deg, #fbff00, #fbff00 30px, #282c34 30px, #282c34 60px);
+    animation: constructionbg;
+    animation-duration: 1.5s;
+    animation-direction:normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,7 +64,7 @@
 .header-navbar {
     background-color: #403f44;
     display:grid;
-    grid-row:1;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     grid-auto-flow: column;
     gap:10px;
     padding:0;
@@ -63,8 +75,9 @@
 }
 
 .header-button {
-    display:inline;
-    float:right;
+    display:inline-block;
+    align-self: center;
+    text-align: center;
     user-select: none;
     color:#f3faff;
     padding:10px;
@@ -72,6 +85,12 @@
     margin-left:15px;
     margin-right:15px;
     border-radius: 10%;
+}
+
+.header-button-center {
+    grid-auto-flow: column;
+    display:grid;
+    justify-items: center;
 }
 
 .header-button-selected {
@@ -82,4 +101,14 @@
     transition: background-color 0.25s, color 0.25s;
     
     background-color: #56565e;
+}
+
+
+
+/* Footer Styles */
+
+.footer {
+    background-color: #18191b;
+    width: 100%;
+    height: 350px;
 }

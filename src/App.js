@@ -5,14 +5,20 @@ import About from './components/pages/About';
 import Projects from './components/pages/Projects';
 import Root from './components/pages/Root';
 import Construction from './components/pages/construction';
+import Footer from './components/nav/footer';
 
 function App() {
   var path = window.location.pathname;
+  var constructionmode = true
 
   function generateHeader() {
     if (path == "/about/") return Header(0);
     else if (path == "/projects/") return Header(1);
     else return Header(3);
+  }
+
+  function generateFooter() {
+    return Footer();
   }
 
   function generateContent() {
@@ -26,24 +32,31 @@ function App() {
     }
   }
 
-  return (
-    <div className="App">
-      <div className="App-Content-construction">
-        {Construction()}
+  if (constructionmode) {
+    return (
+      <div className="App">
+        <div className="App-Content-construction">
+          {Construction()}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="App">
+        {generateHeader()}
+        <div className="App-Content">
+          {generateContent()}
+        </div>
+        {generateFooter()}
+
+      </div>
+    );
+  }
+
   /*
   WIP
 
-  return (
-    <div className="App">
-      {generateHeader()}
-      <div className="App-Content">
-        {generateContent()}
-      </div>
-    </div>
-  );
+
   */
 }
 
