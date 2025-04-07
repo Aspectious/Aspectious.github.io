@@ -44,11 +44,10 @@ function App() {
     return (
       <div className="App">
         {generateHeader()}
-        <div className="App-Content">
+        <main className="App-Content">
           {generateContent()}
-        </div>
+        </main>
         {generateFooter()}
-
       </div>
     );
   }
